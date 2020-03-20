@@ -8,7 +8,6 @@ const geocode = (address, callback) => {
     if (data.features.length === 0) {
       callback('Enable to find location. Try another search.', undefined);
     } else {
-      console.log(data)
       callback(undefined, {
         latitude: data.features[0].center[1],
         longitude: data.features[0].center[0],
